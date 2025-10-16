@@ -11,14 +11,14 @@ app.get(`/roll/:numb`, (req, res) => {
         return res.send(`You must specify a number.`)
     }
 })
-app.get(`/collectibles/:item`, (req, res) => {
+app.get(`/collectibles/:itemId`, (req, res) => {
     const collectibles = [
     { name: 'shiny ball', price: 5.95 },
     { name: 'autographed picture of a dog', price: 10 },
     { name: 'vintage 1970s yogurt SOLD AS-IS', price: 0.99 }
     ];
-    res.send(`So, you want the ${item.name}? For ${item.price}, it can be yours!`)
-
+    const index = req.params.itemId;
+    res.send(`So, you want the ${itemId.name}? For ${itemId.price}, it can be yours!`)    
 })
 
 app.listen(3000, () => {
