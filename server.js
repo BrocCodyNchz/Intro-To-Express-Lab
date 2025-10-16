@@ -11,5 +11,16 @@ app.get(`/roll/:numb`, (req, res) => {
         return res.send(`You must specify a number.`)
     }
 })
-app.get(`/collectibles/:index`, (req, res) => {  
+app.get(`/collectibles/:item`, (req, res) => {
+    const collectibles = [
+    { name: 'shiny ball', price: 5.95 },
+    { name: 'autographed picture of a dog', price: 10 },
+    { name: 'vintage 1970s yogurt SOLD AS-IS', price: 0.99 }
+    ];
+    res.send(`So, you want the ${item.name}? For ${item.price}, it can be yours!`)
+
 })
+
+app.listen(3000, () => {
+  console.log('Listening on port 3000');
+});
